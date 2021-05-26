@@ -56,11 +56,11 @@ describe('EWECOIN Token', function () {
     let allowance
 
     beforeEach(async function () {
-      allowance = await ewecoin.connect(owner).approve(bob.address, INITIAL_SUPPLY.div(2))
+      allowance = await ewecoin.connect(owner).approve(bob.address, INITIAL_SUPPLY)
     })
 
     it('Emit an Approved event', async function () {
-      expect(allowance).to.emit(ewecoin, 'Approval').withArgs(owner.address, bob.address, INITIAL_SUPPLY.div(2))
+      expect(allowance).to.emit(ewecoin, 'Approval').withArgs(owner.address, bob.address, INITIAL_SUPPLY)
     })
 
   })
